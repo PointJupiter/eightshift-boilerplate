@@ -37,7 +37,7 @@
 		"webpack-cli": "^4.3.1"
 	},
 	"dependencies": {
-		"@eightshift/frontend-libs": "^4.0.0"
+		"@eightshift/frontend-libs": "PointJupiter/eightshift-frontend-libs"
 	},
 	"husky": {
 		"hooks": {

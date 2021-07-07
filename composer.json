@@ -23,6 +23,12 @@
 		"issues": "https://github.com/infinum/eightshift-boilerplate/issues",
 		"source": "https://github.com/infinum/eightshift-boilerplate"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/PointJupiter/eightshift-libs.git"
+		}
+	],
 	"require-dev": {
 		"infinum/eightshift-coding-standards": "^1.1",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
