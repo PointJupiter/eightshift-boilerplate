@@ -20,6 +20,7 @@
 	},
 	"homepage": "https://github.com/infinum/eightshift-boilerplate#readme",
 	"scripts": {
+		"generate:colors": "node ./extras/cli/generate-colors.js",
 		"__eslintTheme": "eslint src/**/*.js",
 		"__stylelintTheme": "stylelint src/**/*.scss",
 		"lintStyle": "npm run __stylelintTheme",

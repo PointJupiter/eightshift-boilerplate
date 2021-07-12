@@ -32,6 +32,7 @@
 	"require-dev": {
 		"infinum/eightshift-coding-standards": "^1.1",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "symplify/vendor-patches": "9.2.23",
 		"szepeviktor/phpstan-wordpress": "^0.7",
 		"php-stubs/wordpress-stubs": "^5.5"
 	},
@@ -60,6 +61,11 @@
 	"extra": {
 		"imposter": {
 			"namespace": "EightshiftBoilerplateVendor"
-		}
+		},
+        "patches": {
+            "infinum/eightshift-libs": [
+                "extras/patches/infinum-eightshift-libs-src-blocks-blockscli-php.patch"
+            ]
+        }
 	}
 }
