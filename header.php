@@ -30,10 +30,9 @@ use EightshiftBoilerplate\Manifest\Manifest;
 <?php
 // Header Component.
 echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	'layout-three-columns',
+	'header',
 	[
-		'selectorClass' => 'header',
-		'layoutLeft' => Components::render(
+		'headerLogo' => Components::render(
 			'logo',
 			[
 				'parentClass' => 'header',
@@ -43,36 +42,38 @@ echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputN
 				'logoHref' => \get_bloginfo('url'),
 			]
 		),
-		'layoutCenter' => Components::render(
+		'headerMenu' => Components::render(
 			'menu',
 			[
 				'variation' => 'horizontal',
 				'parentClass' => 'header',
 			]
 		),
-		'layoutRight' => Components::render('hamburger'),
-	]
-);
-
-// Menu Drawer Style Component.
-echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	'drawer',
-	[
-		'drawerTrigger' => 'js-hamburger',
-		'drawerOverlay' => 'js-page-overlay',
-		'drawerPosition' => 'left',
-		'drawerMenu' => Components::render(
-			'menu',
+		'headerHamburger' => Components::render('hamburger'),
+		'headerMobileMenu' => Components::render(
+			'drawer',
 			[
-				'variation' => 'vertical',
-				'parentClass' => 'drawer',
+				'blockClass' => 'header',
+				'selectorClass' => 'drawer',
+				'drawerTrigger' => 'js-hamburger',
+				'drawerOverlay' => 'js-page-overlay',
+				'drawerPosition' => 'left',
+				'drawerMenu' => Components::render(
+					'menu',
+					[
+						'variation' => 'vertical',
+						'parentClass' => 'drawer',
+						'jsClass' => 'menu-vertical'
+					]
+				),
 			]
 		),
+		'headerMobilePageOverlay' => Components::render('page-overlay', ['blockClass' => 'header']),
+		'headerUseSearch' => true,
+		'headerSearch' => Components::render('search'),
 	]
 );
 
-// Page Overlay Component.
-echo Components::render('page-overlay'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 ?>
 
 <main class="main-content">
