@@ -47,3 +47,7 @@ if (class_exists(Main::class)) {
 if (class_exists(Cli::class)) {
 	(new Cli())->load('boilerplate');
 }
+
+add_theme_support('post-thumbnails');
+add_theme_support('title-tag');
+add_post_type_support('page', 'excerpt');
